@@ -1,0 +1,44 @@
+.team {
+  background: $backgroun-color;
+
+  .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .navi {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 0px;
+  }
+}
+
+.team-card {
+  background-color: $primary-white-color;
+  line-height: 1.19;
+  text-align: center;
+  padding-bottom: 24px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: $people-card-shadow;
+}
+
+.team-image {
+  margin-bottom: 30px;
+}
+
+.people {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin: 0 0 10px;
+  color: $primary-title-color;
+}
+
+.people-description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin: 0 0 16px;
+}

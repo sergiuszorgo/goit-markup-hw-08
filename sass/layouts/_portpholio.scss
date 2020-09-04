@@ -1,0 +1,54 @@
+.portpholio {
+  padding-top: 50px;
+  padding-bottom: 64px;
+}
+
+.portpholio-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.card-title {
+  padding: 20px 24px;
+}
+
+.portpholio-card {
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    box-shadow: $primary-card-shadow;
+  }
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.portpholio-image {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.portpholio-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $primary-white-color;
+  transform: translateY(100%);
+  transition: transform $time $function;
+}
+
+.portpholio-card:hover .portpholio-text {
+  transform: translateY(0);
+}

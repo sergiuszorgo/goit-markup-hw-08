@@ -1,0 +1,90 @@
+.foot {
+  background: #2f303a;
+}
+.foot .container {
+  padding: 60px 0 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.address {
+  margin-right: 70px;
+}
+
+.come-on {
+  margin-right: 94px;
+}
+
+.addres-items {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.bottom-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  text-decoration: none;
+}
+
+.bottom-logo-color {
+  color: $primary-white-color;
+}
+.addres-item {
+  color: $primary-white-color;
+}
+
+.address-list {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.addres-contact {
+  color: $second-white-color;
+}
+
+.come-on-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $primary-white-color;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  list-style: none;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: $primary-white-color;
+}
+
+.social-items-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color $time $function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}

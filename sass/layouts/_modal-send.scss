@@ -1,0 +1,36 @@
+.send input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  color: $icons-color;
+  border: 1px solid $second-white-color;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-right: 12px;
+}
+
+.send input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.send-item {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.send button {
+  display: inline-flex;
+  box-sizing: border-box;
+  padding: 10px 28px;
+}
+
+.icon-send {
+  margin-left: 10px;
+}

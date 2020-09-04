@@ -1,0 +1,163 @@
+.dropwindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity $time $function;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: auto;
+  padding: 40px;
+  border-radius: 4px;
+  background: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform $time $function;
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-white-color;
+  cursor: pointer;
+}
+
+.close:hover .close-icon {
+  fill: $accent-color;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.modal-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  textarea {
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    resize: none;
+    transition: border-color $time $function;
+  }
+  textarea::placeholder {
+    font-size: 12px;
+    color: $placeholder-color;
+  }
+
+  input {
+    height: 40px;
+    padding: 11px 42px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    transition: border-color $time $function;
+  }
+
+  input:focus,
+  input:hover,
+  textarea:focus,
+  textarea:hover {
+    border-color: $accent-color;
+    outline-color: $accent-color;
+  }
+
+  input:hover ~ .modal-icon,
+  input:focus ~ .modal-icon {
+    fill: $accent-color;
+  }
+}
+
+.modal-form label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $primary-text-color;
+  margin-bottom: 4px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 60%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: fill $time $function;
+}
+
+.agriment {
+  text-align: center;
+  margin-bottom: 30px;
+
+  label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  a {
+    color: $accent-color;
+  }
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  input:checked ~ .castom-box {
+    background-color: $accent-color;
+    background-image: url(../images/check.svg);
+    background-origin: border-box;
+    background-size: contain;
+    border-color: transparent;
+  }
+}
+
+.castom-box {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid $secondary-text-color;
+  border-radius: 2px;
+  transition: background-color $time $function;
+}
+
+.submit {
+  text-align: center;
+}

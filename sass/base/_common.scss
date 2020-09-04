@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.logo-nav {
+  display: flex;
+}
+
+.navi {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.92;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+}
+
+.logo-color {
+  color: $logo-color;
+}
+
+.site-nav .navi-item + .navi-item {
+  margin-left: 50px;
+}
+
+.navi-list {
+  margin-left: 85px;
+  padding: 0px;
+}
+
+.link {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navi-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $primary-title-color;
+  transition: color $time $function;
+}
+
+.current::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 4px;
+  width: 100%;
+  background: $accent-color;
+  border-radius: 2px;
+}
+
+.link:hover,
+.link:focus,
+.current {
+  color: $accent-color;
+}
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.addres-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+}
+
+.phone {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: $icons-color;
+}
+
+.mail {
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+  fill: $icons-color;
+}
+.contact-item:hover .addres-link,
+.contact-item:focus .addres-link,
+.contact-item:hover .icon,
+.contact-item:focus .icon {
+  fill: $accent-color;
+}

@@ -1,0 +1,36 @@
+.soсial-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  list-style: none;
+}
+
+.social-items:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0;
+  border-radius: 50%;
+  transition: background-color $time $function;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    fill: $icons-color;
+  }
+  &:hover,
+  &:focus,
+  &:hover .icon,
+  &:focus .icon {
+    fill: $primary-white-color;
+    background-color: $accent-color;
+    transition: fill $time $function;
+  }
+}

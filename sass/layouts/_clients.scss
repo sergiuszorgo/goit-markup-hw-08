@@ -1,0 +1,39 @@
+.clients .container {
+  padding: 94px 15px 94px;
+}
+
+.clients-list {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  list-style: none;
+}
+
+.clients-list-item {
+  align-items: flex-start;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients-item {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $icons-color;
+  border-radius: 4px;
+
+  .icon {
+    fill: $icons-color;
+  }
+  &:hover,
+  &:focus,
+  &:hover .icon,
+  &:focus .icon {
+    fill: $accent-color;
+    border-color: $accent-color;
+    transition: fill $time $function;
+  }
+}
