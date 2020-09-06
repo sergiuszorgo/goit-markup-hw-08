@@ -29,9 +29,11 @@
   @include for-size(tablet-portrait) {
     display: block;
     width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   @include for-size(tablet-landscape) {
-    // @media (min-width: 768px) {
     width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
     &:nth-last-child(-n + 2) {
