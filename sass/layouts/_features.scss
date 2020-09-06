@@ -26,16 +26,13 @@
 }
 
 .feature-item {
-  @include for-size(tablet-portrait) {
-    display: block;
-    width: 100%;
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
   }
+
   @include for-size(tablet-landscape) {
     width: calc((100% - 30px) / 2);
-    margin-bottom: 30px;
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -45,6 +42,7 @@
     margin-bottom: 0;
   }
 }
+
 .feature-icon {
   display: inline-flex;
   align-items: center;
