@@ -5,9 +5,10 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  .navi {
+  .team-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
     padding: 0px;
     margin-top: 0px;
   }
