@@ -20,24 +20,25 @@
     }
   }
   .team-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include for-size(tablet-landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 }
 
 .team-card {
+  width: 100%;
   background-color: $primary-white-color;
   line-height: 1.19;
   text-align: center;
-  padding-bottom: 24px;
-  // margin-bottom: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: $people-card-shadow;
 
-  @include for-size(tablet-portrait) {
-    display: block;
-    width: 100%;
+  @include for-size(phone-only) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }

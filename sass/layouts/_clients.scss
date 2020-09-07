@@ -4,21 +4,39 @@
 
 .clients-list {
   display: flex;
-  align-items: flex-start;
   padding: 0px;
   list-style: none;
+  @include for-size(tablet-max) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .clients-list-item {
-  align-items: flex-start;
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include for-size(mobile-max) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 60px) / 3);
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
 .clients-item {
   display: flex;
-  width: 170px;
+  width: 100%;
   height: 90px;
   align-items: center;
   justify-content: center;

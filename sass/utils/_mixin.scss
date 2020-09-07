@@ -7,12 +7,20 @@
     @media (max-width: #{$mobile - 1}) {
       @content;
     }
-  } @else if $range == tablet-portrait {
+  } @else if $range == mobile-portrait {
     @media (min-width: $mobile) {
+      @content;
+    }
+  } @else if $range == mobile-max {
+    @media (max-width: #{$tablet - 1}) {
       @content;
     }
   } @else if $range == tablet-landscape {
     @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $range == tablet-max {
+    @media (max-width: $desktop - 1) {
       @content;
     }
   } @else if $range == desktop {
