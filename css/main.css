@@ -96,6 +96,24 @@ ul {
   padding-right: 15px;
 }
 
+.desstr {
+  padding: 0px;
+  margin: 0 0 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.67;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .desstr {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -515,7 +533,7 @@ ul {
 
 @media (max-width: 767px) {
   .features {
-    width: 480px;
+    max-width: 480px;
     padding: 60px 15px 60px;
   }
 }
@@ -710,17 +728,6 @@ ul {
   position: relative;
 }
 
-.desstr {
-  padding: 0px;
-  margin: 0 0 50px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.67;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
 .business {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,7 +770,7 @@ ul {
 
 @media (max-width: 767px) {
   .team .team-container {
-    width: 480px;
+    max-width: 480px;
     padding: 60px 15px 60px;
   }
 }

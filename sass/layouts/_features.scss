@@ -6,7 +6,7 @@
   padding-right: 15px;
 
   @include for-size(mobile-max) {
-    width: 480px;
+    max-width: 480px;
     padding: 60px 15px 60px;
   }
   @include for-size(tablet-landscape) {
