@@ -509,6 +509,15 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .features {
+    width: 480px;
+    padding: 60px 15px 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -748,6 +757,15 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .team .team-container {
+    width: 480px;
+    padding: 60px 15px 60px;
+  }
 }
 
 @media (min-width: 768px) {
