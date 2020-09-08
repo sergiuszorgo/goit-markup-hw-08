@@ -201,10 +201,16 @@ ul {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .site-header {
+    height: 60px;
+  }
+}
+
 .menu-button {
   position: absolute;
   top: 50%;
-  left: 90%;
+  left: 95%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   display: -webkit-inline-box;
@@ -216,7 +222,7 @@ ul {
   background-color: transparent;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -234,7 +240,7 @@ ul {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .menu-container {
     text-align: center;
     display: none;
@@ -250,7 +256,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu-container {
     max-width: 937px;
     display: -webkit-box;
@@ -285,20 +291,20 @@ ul {
   padding: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .site-nav {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .site-nav .navi-item:not(:last-child) {
     margin-right: 50px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .site-nav .navi-item:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -312,7 +318,7 @@ ul {
   padding: 0px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navi-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -332,14 +338,14 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navi-link {
     font-size: 18px;
     padding-bottom: 8px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navi-link {
     display: inline-block;
     padding-top: 32px;
@@ -468,15 +474,31 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0px;
-  list-style: none;
 }
 
-.button-list .btn-box + .btn-box {
-  margin-left: 8px;
+.button-list .btn-box:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+  .button-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .button-list .btn-box {
+    margin-bottom: 15px;
+  }
+  .button-list .btn-box:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .hero-btn {

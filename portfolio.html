@@ -19,47 +19,54 @@
       <!-- Навигация -->
 
       <div class="container site-header">
-        <nav class="site-nav">
-          <a href="./index.html" class="logo link"
-            >Web <span class="logo-color">Studio</span>
-          </a>
-          <ul class="navi navi-list">
-            <li class="navi-item">
-              <a href="./index.html" class="navi-link link">Студия</a>
+        <a href="./index.html" class="logo link">
+          <nobr>
+            Web <span class="logo-color">Studio</span>
+          </nobr>
+        </a>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg class="icon-menu-mob" width="26" height="26" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/icons/sprite.svg#close"></use>
+            <use class="icon-menu" href="./images/icons/sprite.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" data-menu>
+          <nav class="site-nav">
+            <ul class="navi-list">
+              <li class="navi-item">
+                <a href="./index.html" class="navi-link current">Студия</a>
+              </li>
+              <li class="navi-item">
+                <a href="" class="navi-link">Портфолио</a>
+              </li>
+              <li class="navi-item">
+                <a href="" class="navi-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+      
+      
+          <!-- АДРЕС -->
+      
+          <ul class="contact-list">
+            <li class="contact-item">
+              <a href="mailto:info@devstudio.com" class="addres-link">
+                <svg class="mail icon">
+                  <use href="./images/icons/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a>
             </li>
-            <li class="navi-item">
-              <a href="./portfolio.html" class="navi-link link current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navi-item">
-              <a href="" class="navi-link link">Контакты</a>
+            <li class="contact-item">
+              <a href="tel:+380991111111" class="addres-link">
+                <svg class="phone icon">
+                  <use href="./images/icons/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a>
             </li>
           </ul>
-        </nav>
-
-        <!-- АДРЕС -->
-
-        <ul class="navi contact-list">
-          <li class="contact-item">
-            <a href="mailto:info@devstudio.com" class="addres-link link">
-              <svg class="mail icon">
-                <use href="./images/icons/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="navi contact-item">
-            <a href="tel:+380991111111" class="addres-link link">
-              <svg class="phone icon">
-                <use href="./images/icons/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
-    </header>
+      </header>
 
     <!-- КНОПКИ ФИЛЬТРА -->
     <section class="container filter">
@@ -299,29 +306,21 @@
 
     <!--подвал-->
     <footer class="foot">
-      <div class="container">
+      <div class="container footer-block">
         <div class="address">
-          <a href="index.html" class="bottom-logo"
-            >Web <span class="bottom-logo-color">Studio</span>
+          <a href="index.html" class="bottom-logo">Web <span class="bottom-logo-color">Studio</span>
           </a>
           <address class="address-list">
             <ul class="addres-items">
               <li>
-                <a
-                  href="https://goo.gl/maps/2EUn389jbwumqFo99"
-                  class="addres-item link"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                ><br />
+                <a href="https://goo.gl/maps/2EUn389jbwumqFo99" class="addres-item link">г. Киев, пр-т Леси Украинки,
+                  26</a><br />
               </li>
               <li>
-                <a href="mailto:info@example.com" class="addres-contact link"
-                  >info@example.com</a
-                ><br />
+                <a href="mailto:info@example.com" class="addres-contact link">info@example.com</a><br />
               </li>
               <li>
-                <a href="tel:+380991111111" class="addres-contact link"
-                  >+38 099 111 11 11</a
-                >
+                <a href="tel:+380991111111" class="addres-contact link">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -330,52 +329,32 @@
           <b class="come-on-item">присоединяйтесь</b>
           <ul class="social">
             <li class="social-items">
-              <a
-                href="https://instagramm.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                area-label="Instagramm"
-                class="social-items-link"
-              >
+              <a href="https://instagramm.com" target="_blank" rel="noopener noreferrer" area-label="Instagramm"
+                class="social-items-link">
                 <svg class="footer-icon">
                   <use href="./images/icons/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-items">
-              <a
-                href="https://twittwr.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                area-label="Twitter"
-                class="social-items-link"
-              >
+              <a href="https://twittwr.com" target="_blank" rel="noopener noreferrer" area-label="Twitter"
+                class="social-items-link">
                 <svg class="footer-icon">
                   <use href="./images/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-items">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                area-label="Facebook"
-                class="social-items-link"
-              >
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" area-label="Facebook"
+                class="social-items-link">
                 <svg class="footer-icon">
                   <use href="./images/icons/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-items">
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                area-label="Linkedin"
-                class="social-items-link"
-              >
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" area-label="Linkedin"
+                class="social-items-link">
                 <svg class="footer-icon">
                   <use href="./images/icons/sprite.svg#linkedin"></use>
                 </svg>
@@ -384,9 +363,9 @@
           </ul>
         </div>
         <div class="send">
-          <form>
-            <h2 class="send-item">Подпишитесь на рассылку</h2>
-            <input type="email" name="email" id="email" placeholder="E-mail">
+          <h2 class="send-item">Подпишитесь на рассылку</h2>
+          <form class="send-form">
+            <input type="email" name="email" id="email" placeholder="E-mail" class="send-input" />
             <button type="submit" class="hero-btn">
               Подписаться
               <svg class="icon-send" width="24" height="24">
@@ -397,5 +376,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -56,7 +56,6 @@
   }
 
   @include for-size(desktop) {
-    // text-align: left;
     width: calc(50% - 60px);
   }
 }

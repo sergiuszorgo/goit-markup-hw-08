@@ -28,13 +28,21 @@
 
 .button-list {
   display: flex;
-  justify-content: center;
-  margin: 0px;
-  list-style: none;
-}
-
-.button-list .btn-box + .btn-box {
-  margin-left: 8px;
+  & .btn-box:not(:last-child) {
+    margin-right: 8px;
+  }
+  @include for-size(mobile-max) {
+    flex-wrap: wrap;
+    & .btn-box {
+      margin-bottom: 15px;
+    }
+    & .btn-box:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+  @include for-size(tablet-landscape) {
+    justify-content: center;
+  }
 }
 
 .hero-btn {
