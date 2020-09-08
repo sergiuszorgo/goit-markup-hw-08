@@ -83,6 +83,20 @@ ul {
   color: $logo-color;
 }
 
+.bottom-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  text-decoration: none;
+}
+
+.bottom-logo-color {
+  color: $primary-white-color;
+}
+
 .link {
   text-decoration: none;
   list-style: none;
@@ -108,4 +122,27 @@ ul {
   height: 11px;
   margin-right: 10px;
   fill: $icons-color;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: $primary-white-color;
+}
+
+.social-items-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color $time $function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }

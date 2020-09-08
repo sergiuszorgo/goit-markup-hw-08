@@ -1,40 +1,16 @@
 .foot {
   background: #2f303a;
 }
-.foot .container {
-  padding: 60px 0 60px;
+
+.footer-block {
   display: flex;
-  justify-content: flex-start;
-}
-
-.address {
-  margin-right: 70px;
-}
-
-.come-on {
-  margin-right: 94px;
-}
-
-.addres-items {
-  list-style: none;
-  padding-left: 0px;
-}
-
-.bottom-logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: $accent-color;
-  text-decoration: none;
-}
-
-.bottom-logo-color {
-  color: $primary-white-color;
-}
-.addres-item {
-  color: $primary-white-color;
+  justify-content: space-between;
+  padding: 60px 15px 60px;
+  @include for-size(tablet-max) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .address-list {
@@ -42,6 +18,75 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
+}
+
+.address {
+  @include for-size(tablet-landscape) {
+    width: calc(50%-15px);
+    margin-right: 165px;
+    margin-bottom: 60px;
+  }
+  @include for-size(desktop) {
+    width: calc(25% - 30px);
+    margin-right: 0px;
+  }
+  @include for-size(mobile-max) {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.come-on {
+  @include for-size(tablet-landscape) {
+    width: calc(50%-15px);
+  }
+  @include for-size(desktop) {
+    width: calc(25% - 30px);
+  }
+  @include for-size(mobile-max) {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+// стили для инпута
+.send {
+  display: block;
+  @include for-size(tablet-max) {
+    width: 100%;
+  }
+
+  @include for-size(desktop) {
+    // text-align: left;
+    width: calc(50% - 60px);
+  }
+}
+
+.send-form {
+  width: 100%;
+
+  @include for-size(tablet-max) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.send-input {
+  width: 100%;
+
+  @include for-size(tablet-max) {
+    margin-bottom: 20px;
+    max-width: 450px;
+  }
+}
+
+.addres-item {
+  color: $primary-white-color;
 }
 
 .addres-contact {
@@ -62,29 +107,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
-  list-style: none;
-}
-
-.footer-icon {
-  width: 20px;
-  height: 20px;
-  fill: $primary-white-color;
-}
-
-.social-items-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 0;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color $time $function;
-
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
+  margin-top: 20px;
+  @include for-size(desktop) {
+    justify-content: flex-start;
   }
+}
+
+.address-list {
+  margin-top: 20px;
 }

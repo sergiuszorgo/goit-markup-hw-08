@@ -40,7 +40,7 @@
   border-radius: 0px 0px 4px 4px;
   box-shadow: $people-card-shadow;
 
-  @include for-size(phone-only) {
+  @include for-size(mobile-max) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -67,7 +67,7 @@
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin: 0 0 10px;
+  margin: 30px 0 10px;
   color: $primary-title-color;
 }
 
