@@ -148,9 +148,25 @@ ul {
   padding: 0px;
 }
 
+.current::after {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 4px;
+  width: 100%;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
 .link:hover,
 .link:focus,
-.current {
+.navi-link:hover,
+.navi-link:focus,
+.navi-link.current {
   color: #2196f3;
 }
 
@@ -351,20 +367,6 @@ ul {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-}
-
-.current::after {
-  content: "";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  height: 4px;
-  width: 100%;
-  background: #2196f3;
-  border-radius: 2px;
 }
 
 @media screen and (max-width: 767px) {
