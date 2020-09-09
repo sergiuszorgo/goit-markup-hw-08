@@ -43,10 +43,6 @@ html {
           box-sizing: inherit;
 }
 
-* {
-  border: 1px solid red;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -705,8 +701,32 @@ ul {
 }
 
 .portpholio {
-  padding-top: 50px;
-  padding-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .portpholio {
+    max-width: 480px;
+    padding: 60px 15px 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portpholio {
+    width: 768px;
+    padding: 60px 15px 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portpholio {
+    width: 1200px;
+    padding: 94px 15px 94px;
+  }
 }
 
 .portpholio-list {
@@ -715,7 +735,9 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px;
   margin: 0px;
 }
@@ -728,13 +750,22 @@ ul {
   margin-bottom: 30px;
 }
 
+.portpholio-card:last-child {
+  margin-bottom: 0;
+}
+
 .portpholio-card:hover, .portpholio-card:focus {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.portpholio-card:not(:nth-child(3n)) {
-  margin-right: 30px;
+@media (min-width: 1200px) {
+  .portpholio-card {
+    width: calc((100% - (2 * 30px)) / 3);
+  }
+  .portpholio-card:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .portpholio-image {
