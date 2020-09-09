@@ -39,7 +39,11 @@
   &:focus {
     box-shadow: $primary-card-shadow;
   }
-  @include for-size(tablet-max) {
+  @include for-size(mobile-max) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 30px) / 2);
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;

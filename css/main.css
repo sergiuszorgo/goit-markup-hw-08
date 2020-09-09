@@ -262,6 +262,7 @@ ul {
     width: 100%;
     background-color: #ffffff;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
+    z-index: 2;
   }
   .menu-container.is-open {
     display: block;
@@ -757,6 +758,22 @@ ul {
 .portpholio-card:hover, .portpholio-card:focus {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 767px) {
+  .portpholio-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portpholio-card {
+    width: calc((100% - 30px) / 2);
+  }
+  .portpholio-card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1348,7 +1365,7 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  max-width: 528px;
   height: auto;
   padding: 40px;
   border-radius: 4px;

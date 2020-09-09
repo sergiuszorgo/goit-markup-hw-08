@@ -47,6 +47,7 @@
     &.is-open {
       display: block;
     }
+    z-index: 2;
   }
 
   @include for-size(tablet-landscape) {
