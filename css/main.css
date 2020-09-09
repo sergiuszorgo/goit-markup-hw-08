@@ -226,7 +226,7 @@ ul {
 .menu-button {
   position: absolute;
   top: 50%;
-  left: 95%;
+  right: 3%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   display: -webkit-inline-box;
@@ -242,6 +242,12 @@ ul {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button:focus-within .icon-cross,
+.menu-button:hover .icon-cross,
+.menu-button:focus .icon-cross {
+  fill: #2196f3;
 }
 
 .menu-button .icon-cross {
